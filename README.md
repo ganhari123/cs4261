@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ShopAndGo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
@@ -25,3 +26,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# cs4261
+Mobile apps and Services group project
+>>>>>>> 3d8b2e8a90be53fd7d32557b9067cfdb516578b8
