@@ -8,9 +8,9 @@ Mobile apps and Services group project
 
 ##Build and Run:
 1) npm install
-2) ng build
-3) npm start
+2) npm start - "this will build and start the application"
 4) open http://localhost:3000/ on browser
+
 
 
 ##Useless Add on information that might be needed later:

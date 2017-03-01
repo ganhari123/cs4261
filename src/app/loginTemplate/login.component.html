@@ -1,0 +1,8 @@
+<form [formGroup]="form">
+        <input formControlName="username" placeholder="username" type="text"><br><br>
+        <input formControlName="password" placeholder="password" type="password"><br><br>
+        <button>Submit</button>
+        <p>don't have an account? click here to register!</p>
+
+</form>
+<p>Value: {{ form.value | json }}</p>
