@@ -1,5 +1,6 @@
 import {Component, Inject} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { Auth } from '../services/auth.service';
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -8,7 +9,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 export class LoginComponent {
   form: FormGroup;
-  constructor(@Inject(FormBuilder) fb: FormBuilder) {
+  constructor(@Inject(FormBuilder) fb: FormBuilder, private auth: Auth) {
     this.form = fb.group({
       username: '',
       password: ''

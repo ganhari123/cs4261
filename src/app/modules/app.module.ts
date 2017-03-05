@@ -6,6 +6,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule, routingComponents} from './router.module';
 import { AppComponent } from '../appComponent/app.component';
+import { PostsService } from '../services/reqpage.service';
+import { Auth } from '../services/auth.service';
+import { AuthGuard } from '../services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,7 @@ import { AppComponent } from '../appComponent/app.component';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PostsService, Auth, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

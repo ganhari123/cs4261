@@ -1,7 +1,7 @@
 <form [formGroup]="form">
-        <input formControlName="username" placeholder="username" type="text"><br><br>
-        <input formControlName="password" placeholder="password" type="password"><br><br>
-        <button>Submit</button>
+        <input formControlName="username" #username placeholder="username" type="text"><br><br>
+        <input formControlName="password" #password placeholder="password" type="password"><br><br>
+        <button (click)="auth.login(username.value, password.value)" >Submit</button>
         <p>don't have an account? click here to register!</p>
 
 </form>

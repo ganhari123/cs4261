@@ -1,0 +1,16 @@
+#regForm {
+	position: fixed;
+  	top: 50%;
+  	left: 50%;
+  	background-color: #6f6d74;
+  /* bring your own prefixes */
+  	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+	border-radius: 10px;
+	width: 300px;
+}
+
+#already {
+	font-size: 10px;
+}

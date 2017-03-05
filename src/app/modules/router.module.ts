@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, CanActivate } from '@angular/router';
 import { LoginComponent } from '../loginTemplate/loginTemp.component';
 import { RegisterComponent } from '../registerTemplate/register.component';
+import { HomeComponent} from '../homeTemplate/home.component';
+import { AuthGuard } from '../services/auth-guard.service';
 
 const routes: Routes = [
 	{	
-        path: 'api/login',
+        path: 'login',
         component: LoginComponent
     },
     {
-        path: 'api/register',
+        path: 'register',
         component: RegisterComponent
     },
     {
+        path: 'home',
+        component: HomeComponent,
+        canActivate: [AuthGuard]
+    },
+    {
         path: '',
-        redirectTo: '/api/register',
+        redirectTo: '/register',
         pathMatch: 'full'
     }
 ];
@@ -25,4 +32,4 @@ exports: [RouterModule]
 })
 export class AppRoutingModule {}
 
-export const routingComponents = [LoginComponent, RegisterComponent];
+export const routingComponents = [LoginComponent, RegisterComponent, HomeComponent];
