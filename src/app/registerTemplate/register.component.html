@@ -17,7 +17,7 @@
             <label id="label">Confirm Password:</label>
             <input id="input" formControlName="confpassword" type="password">
             <button type="button" id="btn">Register</button>
-            <p (click)="callService()" id="already">Already have an account? Login here</p>
+            <p [routerLink]="['/login']" id="already">Already have an account? Login here</p>
         </form>
     </body>
 </html>

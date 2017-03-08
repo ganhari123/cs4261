@@ -1,4 +1,4 @@
-#regForm {
+#logForm {
 	position: fixed;
   	top: 50%;
   	left: 50%;
@@ -70,4 +70,3 @@
     margin:auto;
     margin-bottom: 4%;
     align-items: center;
-}

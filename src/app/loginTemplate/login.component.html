@@ -4,18 +4,18 @@
     </head>
     <body>
         <img id="logo" src="../../assets/img/Logo.svg">
-        <form id="regForm" [formGroup]="form">
+        <form id="logForm" [formGroup]="form">
             <p id="header">Login</p>
             <div>
                 <label id="label">Username:</label>
-                <input id="input" formControlName="username" type="text">
+                <input id="input" #username formControlName="username" type="text">
             </div>
             <div>
                 <label id="label">Password:</label>
-                <input id="input" formControlName="password" type="password">
+                <input id="input" #password formControlName="password" type="password">
             </div>
             <button id="btn" (click)="auth.login(username.value, password.value)" >Login</button>
-            <p (click)="callService()" id="already">Don't have an account? Sign up now!</p>
+            <p [routerLink]="['/register']" id="already">Don't have an account? Sign up now!</p>
         </form>
     </body>
 </html>
