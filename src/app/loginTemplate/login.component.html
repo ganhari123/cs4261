@@ -1,8 +1,7 @@
-<form [formGroup]="form">
+<form id="logForm" [formGroup]="form">
         <input formControlName="username" #username placeholder="username" type="text"><br><br>
         <input formControlName="password" #password placeholder="password" type="password"><br><br>
         <button (click)="auth.login(username.value, password.value)" >Submit</button>
-        <p>don't have an account? click here to register!</p>
+        <p [routerLink]="['/register']" id="already">don't have an account? click here to register!</p>
 
 </form>
-<p>Value: {{ form.value | json }}</p>

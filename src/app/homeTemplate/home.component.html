@@ -1,5 +1,7 @@
-<h1>Welcome</h1>
+<h1>Welcome {{auth.userProfile.name}}</h1><br>
 
-<button (click)="auth.logout()"> Logout </button>
+<button (click)="auth.logout()"> Logout </button><br>
 
-<h1>{{auth.userProfile.name}}</h1>
+<button [routerLink]="['/mycart']">View Shopping Cart</button><br>
+
+<input type="text" placeholder="item search" >

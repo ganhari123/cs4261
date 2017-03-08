@@ -52,7 +52,7 @@ export class Auth {
 
   public login(username: string, password: string): void {
     this.auth0.client.login({
-      realm: 'Username-Password-Authentication',
+      realm: 'maindb',
       username,
       password
     }, (err, authResult) => {

@@ -3,6 +3,6 @@
         <input formControlName="password" placeholder="password" type="password"><br><br>
         <input formControlName="confpassword" placeholder="confirm password" type="password"><br><br>
         <button>Submit</button>
-        <p (click)="callService()" id="already">Already have an account? Login here</p>
+        <p [routerLink]="['/login']" id="already">Already have an account? Login here</p>
 
 </form>
