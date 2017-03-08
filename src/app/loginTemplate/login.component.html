@@ -1,8 +1,21 @@
-<form [formGroup]="form">
-        <input formControlName="username" #username placeholder="username" type="text"><br><br>
-        <input formControlName="password" #password placeholder="password" type="password"><br><br>
-        <button (click)="auth.login(username.value, password.value)" >Submit</button>
-        <p>don't have an account? click here to register!</p>
-
-</form>
-<p>Value: {{ form.value | json }}</p>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Pacifico" rel="stylesheet">
+    </head>
+    <body>
+        <img id="logo" src="../../assets/img/Logo.svg">
+        <form id="regForm" [formGroup]="form">
+            <p id="header">Login</p>
+            <div>
+                <label id="label">Username:</label>
+                <input id="input" formControlName="username" type="text">
+            </div>
+            <div>
+                <label id="label">Password:</label>
+                <input id="input" formControlName="password" type="password">
+            </div>
+            <button id="btn" (click)="auth.login(username.value, password.value)" >Login</button>
+            <p (click)="callService()" id="already">Don't have an account? Sign up now!</p>
+        </form>
+    </body>
+</html>

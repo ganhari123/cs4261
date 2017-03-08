@@ -1,8 +1,23 @@
-<form id="regForm" [formGroup]="form">
-        <input formControlName="username" placeholder="username" type="text"><br><br>
-        <input formControlName="password" placeholder="password" type="password"><br><br>
-        <input formControlName="confpassword" placeholder="confirm password" type="password"><br><br>
-        <button>Submit</button>
-        <p (click)="callService()" id="already">Already have an account? Login here</p>
-
-</form>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Pacifico" rel="stylesheet">
+    </head>
+    <body>
+        <img id="logo" src="../../assets/img/Logo.svg">
+        <form id="regForm" [formGroup]="form">
+            <p id="header">Register</p>
+            <div>
+                <label id="label">Username:</label>
+                <input id="input" formControlName="username" type="text">
+            </div>
+            <div>
+                <label id="label">Password:</label>
+                <input id="input" formControlName="password" type="password">
+            </div>
+            <label id="label">Confirm Password:</label>
+            <input id="input" formControlName="confpassword" type="password">
+            <button type="button" id="btn">Register</button>
+            <p (click)="callService()" id="already">Already have an account? Login here</p>
+        </form>
+    </body>
+</html>
