@@ -1,1 +1,7 @@
 <h1> My Cart </h1><br>
+<button>Delete Item</button>
+<ul class="heroes">
+      <li *ngFor="let item of itemCart">
+        <span class="badge"> {{item.name}} <button (click)="deleteItem(item)">Delete Item</button></span> 
+      </li>
+</ul>

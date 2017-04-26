@@ -9,7 +9,7 @@ import { Auth } from '../services/auth.service';
 
 export class HomeComponent {
   constructor(private auth: Auth) {
-  	console.log(auth.userProfile);
+  	console.log(auth.getUserData());
   }
 
 

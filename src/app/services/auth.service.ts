@@ -61,15 +61,7 @@ export class Auth {
         return;
       }
       if (authResult && authResult.idToken && authResult.accessToken) {
-        this.setUser(authResult);
-        this.auth0.client.userInfo(authResult.accessToken, (err, user) => {
-          // Now you have the user's information
-          console.log(user);
-          this.userProfile = user;
-          this.router.navigate(['/home']);
-        });
-
-        
+        this.setUser(authResult);    
       }
     });
   }
@@ -87,9 +79,22 @@ export class Auth {
     this.router.navigate(['/login']);
   }
 
+  public getUserData(): any {
+      return localStorage.getItem('userProfile');
+  }
+
   private setUser(authResult): void {
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
+    this.auth0.client.userInfo(authResult.accessToken, (err, user) => {
+          // Now you have the user's information
+          console.log(user);
+          this.userProfile = user;
+          console.log(Object.keys(user));
+          localStorage.setItem('userProfile', user.name);
+          this.router.navigate(['/home']);
+    });
+    
     
   }
 }
